@@ -1,0 +1,66 @@
+html{
+  font-size: 1rem;
+  background-color:rgb(115, 246, 246);
+  color:black;
+  font-family: fantasy;
+}
+
+h1{
+    text-align: center;
+}
+
+div{
+    margin: auto;
+    text-align: center;
+     width: 25%;
+     
+}
+
+#display{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color:rgb(9, 9, 9);
+}
+
+#checker::after {
+  color: rgb(24, 212, 24);
+}
+
+
+#add{
+  background-color:rgb(24, 212, 24);
+  padding: 2px;
+}
+
+
+#deleter{
+  float: right;
+  background-color: red;
+}
+
+li{
+  counter-increment:initial;
+}
+
+
+button{
+  text-align: center;
+}
+
+
+#item{
+  border: 2px solid rgb(24, 212, 24);
+  background-color:rgb(115, 246, 246);
+  padding: 3%;
+}
+
+#list{
+  text-align: center;
+  justify-content: center;
+}
+
+#checker{
+  text-align: center;
+}
