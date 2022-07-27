@@ -2,7 +2,7 @@ html{
   font-size: 1rem;
   background-color:rgb(115, 246, 246);
   color:black;
-  font-family: fantasy;
+  font-family:'Times New Roman', Times, serif;
 }
 
 h1{
@@ -12,7 +12,7 @@ h1{
 div{
     margin: auto;
     text-align: center;
-     width: 25%;
+     width: 35%;
      
 }
 
