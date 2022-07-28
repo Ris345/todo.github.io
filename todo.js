@@ -20,8 +20,9 @@
     newItem.appendChild(checkMark)
     checkMark.style.cssFloat = "left"
     // adding the styling with a line through element.
-    checkMark.addEventListener('change', function() {
-        newItem.style.textDecoration =  'line-through'
+    checkMark.addEventListener('change', function(c) {
+      // checking for a tick mark with ternary operator 
+        newItem.style.textDecoration =  checkMark.checked ? 'line-through' : 'none';
       });
 
      //console.log(checkMark)
