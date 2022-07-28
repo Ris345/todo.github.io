@@ -1,5 +1,7 @@
 
 
+
+
 // Event Listener for the add button
  document.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -11,16 +13,17 @@
     //console.log(newItem)
     // adding and Id 
     newItem.setAttribute('id','overkill')
-    // creating a text node 
-    const text = document.createTextNode(userInput)
+    // creating a text node from the user input 
+    let text = document.createTextNode(userInput)
     //console.log(text)
     newItem.appendChild(text)
     // checkmark button
     let checkMark = document.createElement('input')
     newItem.appendChild(checkMark)
+    // making sure the  input button is on the left 
     checkMark.style.cssFloat = "left"
     // adding the styling with a line through element.
-    checkMark.addEventListener('change', function(c) {
+    checkMark.addEventListener('click', function(c) {
       // checking for a tick mark with ternary operator 
         newItem.style.textDecoration =  checkMark.checked ? 'line-through' : 'none';
       });
@@ -33,6 +36,7 @@
     let deleteItem = document.createElement('button')
        // event listner for the X button 
     deleteItem.addEventListener('click', function(r){
+      // removes selected item 
           newItem.remove()
     })
     //console.log(deleteItem)
