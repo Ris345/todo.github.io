@@ -2,7 +2,7 @@
 
 ### Simple To Do app made with Vanilla JavaScript, HTML and CSS.
 
-[App](./AppPic.png)
+![App Picture](./AppPic.png)
 
 
 
