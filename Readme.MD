@@ -9,9 +9,10 @@
 # Functionality
 
 [App](https://ris345.github.io/todo.github.io/)
-* User can type a item list in the input field
-* User can add an item
-*  A ordered list is displayed, user can check the completed task
+* User can type anything in the input field
+* User can add an item with the add item button on the right 
+* A ordered list is displayed, and can check the completed task with linethrough. 
+* User can also uncheck the task 
 * User can also remove the list item with a X button.
 
 
