@@ -26,6 +26,12 @@ div{
 
 #checker::after {
   color: rgb(24, 212, 24);
+ 
+}
+
+
+#checker{
+  float:left;
 }
 
 

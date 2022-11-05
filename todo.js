@@ -1,50 +1,46 @@
+document.addEventListener("submit", function (e) {
+  e.preventDefault();
 
+  let userInput = document.getElementById("item").value;
+  const newListItem = createListItem(userInput);
 
+  const checkBox = addCheckmark(newListItem);
 
+  const deleteButton = addDeleteButton(newListItem);
 
-// Event Listener for the add button
- document.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // gets the userInput 
-    let userInput = document.getElementById('item').value
-    //console.log(userInput)
-    // creates a new list item 
-    let newItem = document.createElement('li')
-    //console.log(newItem)
-    // adding and Id 
-    newItem.setAttribute('id','overkill')
-    // creating a text node from the user input 
-    let text = document.createTextNode(userInput)
-    //console.log(text)
-    newItem.appendChild(text)
-    // checkmark button
-    let checkMark = document.createElement('input')
-    newItem.appendChild(checkMark)
-    // making sure the  input button is on the left 
-    checkMark.style.cssFloat = "left"
-    // adding the styling with a line through element.
-    checkMark.addEventListener('click', function(c) {
-      // checking for a tick mark with ternary operator 
-        newItem.style.textDecoration =  checkMark.checked ? 'line-through' : 'none';
-      });
+  document
+    .getElementById("list")
+    .appendChild(deleteButton)
+    .appendChild(checkBox);
+  document.getElementById("item").value = "";
+});
 
-     //console.log(checkMark)
-     // adding to the input element. 
-     checkMark.setAttribute('type','checkbox')
-     checkMark.setAttribute('id','checker')
+function createListItem(input) {
+  const listItem = document.createElement("li");
+  listItem.setAttribute("id", "overkill");
+  const text = document.createTextNode(input);
+  listItem.appendChild(text);
+  return listItem;
+}
 
-    let deleteItem = document.createElement('button')
-       // event listner for the X button 
-    deleteItem.addEventListener('click', function(r){
-      // removes selected item 
-          newItem.remove()
-    })
-    //console.log(deleteItem)
-    deleteItem.setAttribute('id','deleter')
-    deleteItem.innerText = 'X';
-    newItem.appendChild(deleteItem)
-    document.getElementById('list').appendChild(newItem).appendChild(checkMark)
-    
-  })  
-  
-  
+function addCheckmark(listItem) {
+  const checkMark = document.createElement("input");
+  listItem.appendChild(checkMark);
+  checkMark.addEventListener("click", function (c) {
+    listItem.style.textDecoration = checkMark.checked ? "line-through" : "none";
+  });
+  checkMark.setAttribute("type", "checkbox");
+  checkMark.setAttribute("id", "checker");
+  return checkMark;
+}
+
+function addDeleteButton(listItem) {
+  const deleteItem = document.createElement("button");
+  deleteItem.addEventListener("click", function (r) {
+    listItem.remove();
+  });
+  deleteItem.setAttribute("id", "deleter");
+  deleteItem.innerText = "X";
+  listItem.appendChild(deleteItem);
+  return listItem;
+}
